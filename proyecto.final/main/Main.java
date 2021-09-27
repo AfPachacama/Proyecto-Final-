@@ -5,8 +5,8 @@ import java.text.ParseException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import Clases.Libro;
-import Clases.Operaciones;
+import clases.Libro;
+import clases.Operaciones;
 
 public class Main {
 
