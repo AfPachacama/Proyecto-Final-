@@ -1,3 +1,5 @@
+//Declaracion de Paquete
+
 package main;
 
 import java.io.IOException;

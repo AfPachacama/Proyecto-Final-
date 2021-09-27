@@ -1,11 +1,13 @@
+//Declaracion de Paquete
 package clases;
 
-
+//Declaracion de importacion Librerias y Clases
 import java.util.Date;
 
 
 public class Libro {
 	
+//	Variables Y Atributos
 	private int codigo;
 	private String nombre;
 	private String autor;
@@ -21,6 +23,7 @@ public class Libro {
 	private int tiempoLectura;
 	
 	
+//	Declaracion Metodos
 	public long getCedulaReserva() {
 		return CedulaReserva;
 	}
@@ -41,6 +44,7 @@ public class Libro {
 	}
 	public Libro() {
     }
+//	Declaracion de Constructores
 	public Libro(int codigo, String nombre, String autor, int anioPublicacion, String editorial, int cantidadPaginas,
 			float precio,long CedulaReserva,String estado,Date fechaEntrega, String tipo,String CodigoAutorizacion) {
 		this.codigo = codigo;

@@ -1,5 +1,8 @@
+//Declaracion de Paquete
+
 package clases;
 
+//Declaracion de importacion Librerias y Clases
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,7 +48,7 @@ public class Operaciones {
 		System.out.println("Ingrese el autor del libro: ");			
 		li.setAutor(br.readLine());
 		System.out.println("Ingrese el año de publicacion: ");			
-		li.setCodigo(sn.nextInt());
+		li.setAnioPublicacion(sn.nextInt());
 		System.out.println("Ingrese la Editorial del libro: ");			
 		li.setEditorial(br.readLine());
 		System.out.println("Ingrese la cantidad de paginas del libro: ");			
@@ -103,6 +106,8 @@ public class Operaciones {
 				if(libro.getEstado().equals("Reservado") || libro.getEstado().equals("Prestado") ){
 					System.out.println("El libro ya se encuentra reservado \n");
 				}else{
+					
+//					Calendar es una clase de Java que nos permite manejar fechas de una manera distinta de como lo hacíamos con Date.
 					calendar.add(Calendar.DAY_OF_MONTH,5);
 					libro.setCedulaReserva(cedula);
 					libro.setFechaEntrega(calendar.getTime());
@@ -114,6 +119,7 @@ public class Operaciones {
 }
 	
 		public void PrestarLibro(int codigo) throws ParseException{
+//			La sentencia throw se utiliza para lanzar explícitamente una excepción.
 			boolean conf=false;
 			for (Libro libro : arrayLibro) {
 				if(libro.getCodigo()== codigo){
