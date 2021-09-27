@@ -16,7 +16,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		// TODO Auto-generated method stub
-		Scanner sn = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
         boolean salir = false;
         int opcion; 
         int cont=0;
@@ -36,7 +36,7 @@ public class Main {
             try {
          
                 System.out.println("Selecciona una opcion: ");
-                opcion = sn.nextInt();
+                opcion = teclado.nextInt();
                 int opcion2;
                 switch (opcion) {
                     case 1:
@@ -49,24 +49,24 @@ public class Main {
                         System.out.println("2. Reservar Libros"); 
                         System.out.println("3. Salir"); 
                         System.out.println("Selecciona una opcion: ");
-                        opcion2 = sn.nextInt();                        
+                        opcion2 = teclado.nextInt();                        
 	                        if(opcion2==1){
 	                        	System.out.println("=============================================");
 	                            System.out.println("\tCONSULTAR LIBROS");
 	                            System.out.println("=============================================");
-	                        	sn.nextLine();
+	                            teclado.nextLine();
 	                        	System.out.println("Ingrese el nombre o autor del libro"); 
-			                    String palabra = sn.nextLine();		                    
+			                    String palabra = teclado.nextLine();		                    
 								op.buscarLibros(palabra);                     	
 	                        }else if(opcion2==2){
 	                        	System.out.println("=============================================");
 	                            System.out.println("\tRESERVAR LIBROS");
 	                            System.out.println("=============================================");
-	                        	sn.nextLine();
+	                            teclado.nextLine();
 	                        	System.out.println("Ingrese el codigo del libro"); 
-	                        	int codigoLibro = sn.nextInt();	
+	                        	int codigoLibro = teclado.nextInt();	
 		                        System.out.println("Ingrese la cedula del usuario"); 
-				                int cedula = sn.nextInt();	
+				                int cedula = teclado.nextInt();	
 				                op.ReservarLibro(codigoLibro, cedula);
 		                    }else if(opcion2==3){
 		                        	salir2=true;
@@ -81,7 +81,7 @@ public class Main {
                         System.out.println("2. Prestar Libro");
                         System.out.println("3. Aplazar fecha de entrega");
                         System.out.println("4. Salir"); 
-                        opcion = sn.nextInt();
+                        opcion = teclado.nextInt();
                        
                     	
                         switch (opcion) {
@@ -93,20 +93,20 @@ public class Main {
 							System.out.println("=============================================");
                             System.out.println("\tPRESTAMO LIBRO");
                             System.out.println("=============================================");
-                        	sn.nextLine();
+                            teclado.nextLine();
                         	System.out.println("Ingrese el codigo del libro"); 
-                        	int codigoLibro = sn.nextInt();
+                        	int codigoLibro = teclado.nextInt();
 							op.PrestarLibro(codigoLibro);
 							break;
 						case 3:
 							System.out.println("=============================================");
                             System.out.println("\tAPLAZAMIENTO FECHA LIBRO");
                             System.out.println("=============================================");
-                        	sn.nextLine();
+                            teclado.nextLine();
                         	System.out.println("Ingrese el codigo del libro"); 
-                        	int codigoLibro2 = sn.nextInt();	
+                        	int codigoLibro2 = teclado.nextInt();	
 	                        System.out.println("Ingrese la cedula del usuario"); 
-			                int cedula = sn.nextInt();	
+			                int cedula = teclado.nextInt();	
 			                op.AplazarLibro(codigoLibro2, cedula);
 						case 4:
 							salir3=true;
@@ -123,7 +123,7 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un número");
-                sn.next();
+                teclado.next();
             }
         }
 	}
